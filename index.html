@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fliqall — Sosyal Medya Yönetim Platformu</title>
+<meta name="description" content="Tüm sosyal medya hesaplarınızı tek panelden yönetin, planlayın ve analiz edin.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,sans-serif;background:#F4F5F8;color:#16161D;-webkit-font-smoothing:antialiased}
+  a{color:#6D4AFF}
+  a:hover{color:#5B3FD6}
+  ::-webkit-scrollbar{width:9px;height:9px}
+  ::-webkit-scrollbar-thumb{background:#D7DAE3;border-radius:9px;border:2px solid #F4F5F8}
+  ::-webkit-scrollbar-track{background:transparent}
+  @media (max-width:640px){ .fq-footer-grid{grid-template-columns:repeat(2,1fr) !important} }
+  @media (max-width:420px){ .fq-footer-grid{grid-template-columns:1fr !important} }
+  .fq-nav-toggle{display:none}
+  .fq-nav-burger{display:none}
+  .fq-nav-menu{display:flex;align-items:center;gap:26px}
+  @media (max-width:860px){
+    .fq-nav-burger{display:flex !important}
+    .fq-nav-menu{display:none !important;flex-direction:column !important;align-items:flex-start !important;gap:16px !important;width:100%;order:10;margin-top:16px;padding-top:16px;border-top:1px solid #F1F2F6}
+    .fq-nav-toggle:checked ~ .fq-nav-menu{display:flex !important}
+  }
+  @media (max-width:360px){
+    .fq-nav-cta{padding:9px 14px !important;font-size:12.5px !important}
+  }
+</style>
+</head>
+<body>
+
+<div style="width:100%;background:#fff;font-family:'Plus Jakarta Sans',sans-serif">
+  <!-- nav -->
+  <div style="position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:14px 20px;flex-wrap:wrap;padding:16px clamp(20px,4vw,40px);background:rgba(255,255,255,.85);backdrop-filter:blur(10px);border-bottom:1px solid #F1F2F6">
+    <div style="display:flex;align-items:center;gap:9px"><div style="height:26px;width:26px;border-radius:8px;background:linear-gradient(135deg,#8B5CF6,#6D4AFF);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:12px;font-family:'Plus Jakarta Sans',sans-serif">Fq</div><span style="font-size:15px;font-weight:800;letter-spacing:1px;color:#6D4AFF">FLIQALL</span></div>
+    <input type="checkbox" id="fq-nav-toggle" class="fq-nav-toggle">
+    <div class="fq-nav-menu" style="font-size:13.5px;font-weight:600;color:#5A6072">
+      <span style="cursor:pointer">Özellikler</span><span style="cursor:pointer">Platformlar</span><span style="cursor:pointer">Fiyatlandırma</span><span style="cursor:pointer">Blog</span>
+      <span style="font-weight:600;color:#3C4256;cursor:pointer">Giriş Yap</span>
+    </div>
+    <div style="margin-left:auto;display:flex;align-items:center;gap:14px">
+      <button class="fq-nav-cta" style="padding:10px 18px;border:none;border-radius:11px;color:#fff;font-size:13.5px;font-weight:700;cursor:pointer;font-family:inherit;box-shadow:0 4px 12px rgba(109,74,255,.3);background:linear-gradient(135deg,#8B5CF6,#6D4AFF)">Ücretsiz Başla</button>
+      <label for="fq-nav-toggle" class="fq-nav-burger" style="width:38px;height:38px;flex:none;border-radius:10px;border:1px solid #E2E4EC;align-items:center;justify-content:center;cursor:pointer;font-size:16px;color:#3C4256;background:#fff">☰</label>
+    </div>
+  </div>
+
+  <!-- hero -->
+  <div style="position:relative;overflow:hidden;text-align:center;padding:clamp(48px,7vw,78px) clamp(20px,4vw,40px) 60px">
+    <div style="position:absolute;top:-160px;left:50%;transform:translateX(-50%);width:760px;height:420px;border-radius:50%;background:radial-gradient(closest-side,rgba(123,92,255,.16),transparent)"></div>
+    <div style="position:relative;display:inline-flex;align-items:center;gap:8px;padding:7px 15px;border:1px solid #E5DEFF;border-radius:20px;background:#F7F5FF;font-size:12.5px;font-weight:700;color:#6D4AFF;margin-bottom:22px">✦ Faz 1 · Web yayında</div>
+    <div style="position:relative;font-size:clamp(32px,5vw,52px);font-weight:800;line-height:1.08;letter-spacing:-1.5px;color:#16161D;max-width:780px;margin:0 auto;text-wrap:pretty">Tüm sosyal medya hesaplarınız <span style="background:linear-gradient(120deg,#8B5CF6,#6D4AFF);-webkit-background-clip:text;background-clip:text;color:transparent">tek bir merkezden</span> kontrol altında.</div>
+    <div style="position:relative;font-size:17px;line-height:1.6;color:#5A6072;max-width:560px;margin:20px auto 30px">İçerik ve görsellerinizi tek tıkla her platforma özelleştirin, zamanlamayı fliq.all'a bırakın ve ekibinizle onay akışını zahmetsizce yönetin.</div>
+    <div style="position:relative;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:14px">
+      <button style="padding:14px 26px;border:none;border-radius:13px;color:#fff;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit;box-shadow:0 8px 20px rgba(109,74,255,.32);background:linear-gradient(135deg,#8B5CF6,#6D4AFF)">14 gün ücretsiz dene</button>
+      <button style="display:flex;align-items:center;gap:8px;padding:14px 24px;border:1px solid #E2E4EC;background:#fff;border-radius:13px;font-size:15px;font-weight:700;color:#3C4256;cursor:pointer;font-family:inherit">▶ Demoyu izle</button>
+    </div>
+
+    <!-- platform row -->
+    <div style="position:relative;display:flex;gap:13px;justify-content:center;margin-top:40px;flex-wrap:wrap">
+      <div title="Instagram" style="width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;color:#fff;box-shadow:0 4px 12px rgba(16,16,29,.1);background:linear-gradient(135deg,#FEDA75,#FA7E1E 28%,#D62976 58%,#962FBF 80%,#4F5BD5)">◉</div>
+      <div title="TikTok" style="width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;color:#fff;box-shadow:0 4px 12px rgba(16,16,29,.1);background:#111">♪</div>
+      <div title="X" style="width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;color:#fff;box-shadow:0 4px 12px rgba(16,16,29,.1);background:#0A0A0A">𝕏</div>
+      <div title="Facebook" style="width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;color:#fff;box-shadow:0 4px 12px rgba(16,16,29,.1);background:#1877F2">f</div>
+      <div title="LinkedIn" style="width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;color:#fff;box-shadow:0 4px 12px rgba(16,16,29,.1);background:#0A66C2">in</div>
+      <div title="YT Video" style="width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;color:#fff;box-shadow:0 4px 12px rgba(16,16,29,.1);background:#CC0000">▶</div>
+      <div title="Threads" style="width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;color:#fff;box-shadow:0 4px 12px rgba(16,16,29,.1);background:#111">@</div>
+      <div title="Pinterest" style="width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;color:#fff;box-shadow:0 4px 12px rgba(16,16,29,.1);background:#E60023">P</div>
+    </div>
+  </div>
+
+  <!-- how it works -->
+  <div style="padding:50px clamp(20px,4vw,40px) 60px;max-width:1080px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:42px">
+      <div style="font-size:13px;font-weight:700;color:#6D4AFF;letter-spacing:.5px;margin-bottom:10px">NASIL ÇALIŞIR</div>
+      <div style="font-size:clamp(24px,3vw,34px);font-weight:800;color:#16161D;letter-spacing:-.8px;text-wrap:pretty">Saniyeler İçinde İlk Gönderinizi Yayınlayın</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px">
+      <div style="position:relative;background:#fff;border:1px solid #ECEDF3;border-radius:16px;padding:24px;box-shadow:0 1px 3px rgba(16,16,29,.04)">
+        <div style="width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,#8B5CF6,#6D4AFF);color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;margin-bottom:15px">1</div>
+        <div style="font-size:16px;font-weight:700;color:#1F2433;margin-bottom:8px">Hesaplarını Tek Tıkla Bağla</div>
+        <div style="font-size:13.5px;line-height:1.6;color:#6E7488">Instagram, TikTok, X ve diğer platformları saniyeler içinde fliqall’a entegre et.</div>
+      </div>
+      <div style="position:relative;background:#fff;border:1px solid #ECEDF3;border-radius:16px;padding:24px;box-shadow:0 1px 3px rgba(16,16,29,.04)">
+        <div style="width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,#8B5CF6,#6D4AFF);color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;margin-bottom:15px">2</div>
+        <div style="font-size:16px;font-weight:700;color:#1F2433;margin-bottom:8px">İçeriği Hazırla & Özelleştir</div>
+        <div style="font-size:13.5px;line-height:1.6;color:#6E7488">Tek editörde yaz; fliq.all her platformun karakter, görsel ve medya formatına göre otomatik uyarlasın.</div>
+      </div>
+      <div style="position:relative;background:#fff;border:1px solid #ECEDF3;border-radius:16px;padding:24px;box-shadow:0 1px 3px rgba(16,16,29,.04)">
+        <div style="width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,#8B5CF6,#6D4AFF);color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;margin-bottom:15px">3</div>
+        <div style="font-size:16px;font-weight:700;color:#1F2433;margin-bottom:8px">Zamanla & Analiz Et</div>
+        <div style="font-size:13.5px;line-height:1.6;color:#6E7488">En doğru saatte otomatik yayınla, canlı analitik raporlarıyla etkileşimi artır.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- features -->
+  <div style="padding:20px clamp(20px,4vw,40px) 70px;max-width:1080px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:42px">
+      <div style="font-size:13px;font-weight:700;color:#6D4AFF;letter-spacing:.5px;margin-bottom:10px">NEDEN FLIQALL?</div>
+      <div style="font-size:clamp(24px,3vw,34px);font-weight:800;color:#16161D;letter-spacing:-.8px;text-wrap:pretty">Sosyal Medya Yönetiminde İhtiyacınız Olan Her Şey</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px">
+      <div style="background:#fff;border:1px solid #ECEDF3;border-radius:16px;padding:24px;box-shadow:0 1px 3px rgba(16,16,29,.04)">
+        <div style="width:46px;height:46px;border-radius:13px;background:#F0ECFF;display:flex;align-items:center;justify-content:center;font-size:21px;margin-bottom:16px">✍️</div>
+        <div style="font-size:16px;font-weight:700;color:#1F2433;margin-bottom:8px">Tek Editör, Tüm Platformlar</div>
+        <div style="font-size:13.5px;line-height:1.6;color:#6E7488">Bir kez yazın; karakter limitleri, hashtag’ler ve formatlar her platforma özel otomatik tamamlansın.</div>
+      </div>
+      <div style="background:#fff;border:1px solid #ECEDF3;border-radius:16px;padding:24px;box-shadow:0 1px 3px rgba(16,16,29,.04)">
+        <div style="width:46px;height:46px;border-radius:13px;background:#F0ECFF;display:flex;align-items:center;justify-content:center;font-size:21px;margin-bottom:16px">📅</div>
+        <div style="font-size:16px;font-weight:700;color:#1F2433;margin-bottom:8px">Akıllı takvim & zamanlama</div>
+        <div style="font-size:13.5px;line-height:1.6;color:#6E7488">En yüksek etkileşim saatlerini görün, haftalık ve aylık içeriklerinizi takvim üzerinde saniyeler içinde planlayın.</div>
+      </div>
+      <div style="background:#fff;border:1px solid #ECEDF3;border-radius:16px;padding:24px;box-shadow:0 1px 3px rgba(16,16,29,.04)">
+        <div style="width:46px;height:46px;border-radius:13px;background:#F0ECFF;display:flex;align-items:center;justify-content:center;font-size:21px;margin-bottom:16px">👁️</div>
+        <div style="font-size:16px;font-weight:700;color:#1F2433;margin-bottom:8px">Gerçek zamanlı önizleme</div>
+        <div style="font-size:13.5px;line-height:1.6;color:#6E7488">Gönderinizin Instagram, TikTok, X’te ve diğer platformlarda tam olarak nasıl duracağını yayınlamadan önce görün.</div>
+      </div>
+      <div style="background:#fff;border:1px solid #ECEDF3;border-radius:16px;padding:24px;box-shadow:0 1px 3px rgba(16,16,29,.04)">
+        <div style="width:46px;height:46px;border-radius:13px;background:#F0ECFF;display:flex;align-items:center;justify-content:center;font-size:21px;margin-bottom:16px">✅</div>
+        <div style="font-size:16px;font-weight:700;color:#1F2433;margin-bottom:8px">Ekip onay akışı</div>
+        <div style="font-size:13.5px;line-height:1.6;color:#6E7488">İçerikleri müşterilerinize veya ekibinize onaya gönderin, revizyonları yönetin; marka dilini her zaman koruyun.</div>
+      </div>
+      <div style="background:#fff;border:1px solid #ECEDF3;border-radius:16px;padding:24px;box-shadow:0 1px 3px rgba(16,16,29,.04)">
+        <div style="width:46px;height:46px;border-radius:13px;background:#F0ECFF;display:flex;align-items:center;justify-content:center;font-size:21px;margin-bottom:16px">📊</div>
+        <div style="font-size:16px;font-weight:700;color:#1F2433;margin-bottom:8px">Performans raporları</div>
+        <div style="font-size:13.5px;line-height:1.6;color:#6E7488">Erişim, etkileşim ve takipçi büyümesini tek panelden izleyin; hangi platformun en iyi çalıştığını anında görün.</div>
+      </div>
+      <div style="background:#fff;border:1px solid #ECEDF3;border-radius:16px;padding:24px;box-shadow:0 1px 3px rgba(16,16,29,.04)">
+        <div style="width:46px;height:46px;border-radius:13px;background:#F0ECFF;display:flex;align-items:center;justify-content:center;font-size:21px;margin-bottom:16px">✦</div>
+        <div style="font-size:16px;font-weight:700;color:#1F2433;margin-bottom:8px">AI içerik yardımcısı</div>
+        <div style="font-size:13.5px;line-height:1.6;color:#6E7488">Saniyeler içinde viral başlıklar, açıklama metinleri ve trend hashtag önerileri alarak içerik üretimini 10x hızlandırın.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- stats -->
+  <div style="background:linear-gradient(135deg,#5B3FD6,#6D4AFF 50%,#9B6BFF);padding:48px clamp(20px,4vw,40px);margin:0">
+    <div style="max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:24px;text-align:center;color:#fff">
+      <div><div style="font-size:clamp(28px,3.6vw,38px);font-weight:800;letter-spacing:-1px">Çoklu</div><div style="font-size:13.5px;color:rgba(255,255,255,.82);margin-top:4px">Platform Desteği</div></div>
+      <div><div style="font-size:clamp(28px,3.6vw,38px);font-weight:800;letter-spacing:-1px">12B+</div><div style="font-size:13.5px;color:rgba(255,255,255,.82);margin-top:4px">Planlanan gönderi</div></div>
+      <div><div style="font-size:clamp(28px,3.6vw,38px);font-weight:800;letter-spacing:-1px">%99,9</div><div style="font-size:13.5px;color:rgba(255,255,255,.82);margin-top:4px">Yayın başarı oranı</div></div>
+      <div><div style="font-size:clamp(28px,3.6vw,38px);font-weight:800;letter-spacing:-1px">2 dk</div><div style="font-size:13.5px;color:rgba(255,255,255,.82);margin-top:4px">Ortalama kurulum</div></div>
+    </div>
+  </div>
+
+  <!-- pricing -->
+  <div style="padding:60px clamp(20px,4vw,40px);max-width:1080px;margin:0 auto" id="pricing">
+    <div style="text-align:center;margin-bottom:42px">
+      <div style="font-size:13px;font-weight:700;color:#6D4AFF;letter-spacing:.5px;margin-bottom:10px">FİYATLANDIRMA</div>
+      <div style="font-size:clamp(24px,3vw,34px);font-weight:800;color:#16161D;letter-spacing:-.8px;text-wrap:pretty">Markanıza uygun bir plan</div>
+      <div style="font-size:15px;color:#6E7488;margin-top:10px">Fiyatlarımızı ihtiyacınıza göre belirliyoruz · Teklif için bize yazın</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;align-items:start">
+      <div style="background:#fff;border-radius:18px;padding:26px;box-shadow:0 1px 3px rgba(16,16,29,.04);border:1px solid;border-color:#ECEDF3;position:relative;transform:none">
+        <div style="font-size:15px;font-weight:700;color:#1F2433">Başlangıç</div>
+        <div style="font-size:13px;color:#9AA1B1;margin-top:4px;margin-bottom:18px">Bireysel kullanıcılar için</div>
+        <div style="margin-bottom:20px"><div style="font-size:22px;font-weight:800;color:#16161D;letter-spacing:-.5px;line-height:1.2">Size özel fiyat</div><div style="font-size:12.5px;color:#9AA1B1;font-weight:600;margin-top:5px">İhtiyacınıza göre planlanır</div></div>
+        <button style="width:100%;padding:12px;border-radius:11px;font-size:13.5px;font-weight:700;cursor:pointer;font-family:inherit;margin-bottom:20px;border:1px solid;border-color:#E2E4EC;color:#3C4256;background:#fff">Teklif isteyin</button>
+        <div style="display:flex;flex-direction:column;gap:11px">
+          <div style="display:flex;align-items:center;gap:9px;font-size:13px;color:#5A6072"><span style="width:18px;height:18px;flex:none;border-radius:50%;background:#F0ECFF;color:#6D4AFF;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800">✓</span>3 sosyal hesap</div>
+          <div style="display:flex;align-items:center;gap:9px;font-size:13px;color:#5A6072"><span style="width:18px;height:18px;flex:none;border-radius:50%;background:#F0ECFF;color:#6D4AFF;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800">✓</span>Aylık 30 gönderi</div>
+          <div style="display:flex;align-items:center;gap:9px;font-size:13px;color:#5A6072"><span style="width:18px;height:18px;flex:none;border-radius:50%;background:#F0ECFF;color:#6D4AFF;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800">✓</span>Temel zamanlama</div>
+          <div style="display:flex;align-items:center;gap:9px;font-size:13px;color:#5A6072"><span style="width:18px;height:18px;flex:none;border-radius:50%;background:#F0ECFF;color:#6D4AFF;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800">✓</span>Tekli kullanıcı</div>
+        </div>
+      </div>
+      <div style="background:#fff;border-radius:18px;padding:26px;box-shadow:0 1px 3px rgba(16,16,29,.04);border:1px solid;border-color:#6D4AFF;position:relative;transform:scale(1.04)">
+        <div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);padding:5px 13px;border-radius:9px;background:linear-gradient(135deg,#8B5CF6,#6D4AFF);color:#fff;font-size:11px;font-weight:700">EN POPÜLER</div>
+        <div style="font-size:15px;font-weight:700;color:#1F2433">Profesyonel</div>
+        <div style="font-size:13px;color:#9AA1B1;margin-top:4px;margin-bottom:18px">Büyüyen markalar için</div>
+        <div style="margin-bottom:20px"><div style="font-size:22px;font-weight:800;color:#16161D;letter-spacing:-.5px;line-height:1.2">Size özel fiyat</div><div style="font-size:12.5px;color:#9AA1B1;font-weight:600;margin-top:5px">Hesap ve ekip sayısına göre</div></div>
+        <button style="width:100%;padding:12px;border-radius:11px;font-size:13.5px;font-weight:700;cursor:pointer;font-family:inherit;margin-bottom:20px;border:1px solid;border-color:transparent;color:#fff;background:linear-gradient(135deg,#8B5CF6,#6D4AFF)">Teklif isteyin</button>
+        <div style="display:flex;flex-direction:column;gap:11px">
+          <div style="display:flex;align-items:center;gap:9px;font-size:13px;color:#5A6072"><span style="width:18px;height:18px;flex:none;border-radius:50%;background:#F0ECFF;color:#6D4AFF;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800">✓</span>8 sosyal hesap</div>
+          <div style="display:flex;align-items:center;gap:9px;font-size:13px;color:#5A6072"><span style="width:18px;height:18px;flex:none;border-radius:50%;background:#F0ECFF;color:#6D4AFF;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800">✓</span>Sınırsız gönderi</div>
+          <div style="display:flex;align-items:center;gap:9px;font-size:13px;color:#5A6072"><span style="width:18px;height:18px;flex:none;border-radius:50%;background:#F0ECFF;color:#6D4AFF;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800">✓</span>Akıllı zamanlama + AI</div>
+          <div style="display:flex;align-items:center;gap:9px;font-size:13px;color:#5A6072"><span style="width:18px;height:18px;flex:none;border-radius:50%;background:#F0ECFF;color:#6D4AFF;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800">✓</span>Onay akışı</div>
+          <div style="display:flex;align-items:center;gap:9px;font-size:13px;color:#5A6072"><span style="width:18px;height:18px;flex:none;border-radius:50%;background:#F0ECFF;color:#6D4AFF;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800">✓</span>Performans raporları</div>
+        </div>
+      </div>
+      <div style="background:#fff;border-radius:18px;padding:26px;box-shadow:0 1px 3px rgba(16,16,29,.04);border:1px solid;border-color:#ECEDF3;position:relative;transform:none">
+        <div style="font-size:15px;font-weight:700;color:#1F2433">Ajans</div>
+        <div style="font-size:13px;color:#9AA1B1;margin-top:4px;margin-bottom:18px">Ekipler & ajanslar için</div>
+        <div style="margin-bottom:20px"><div style="font-size:22px;font-weight:800;color:#16161D;letter-spacing:-.5px;line-height:1.2">Size özel fiyat</div><div style="font-size:12.5px;color:#9AA1B1;font-weight:600;margin-top:5px">Marka sayısına göre</div></div>
+        <button style="width:100%;padding:12px;border-radius:11px;font-size:13.5px;font-weight:700;cursor:pointer;font-family:inherit;margin-bottom:20px;border:1px solid;border-color:#E2E4EC;color:#3C4256;background:#fff">Teklif isteyin</button>
+        <div style="display:flex;flex-direction:column;gap:11px">
+          <div style="display:flex;align-items:center;gap:9px;font-size:13px;color:#5A6072"><span style="width:18px;height:18px;flex:none;border-radius:50%;background:#F0ECFF;color:#6D4AFF;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800">✓</span>Sınırsız hesap</div>
+          <div style="display:flex;align-items:center;gap:9px;font-size:13px;color:#5A6072"><span style="width:18px;height:18px;flex:none;border-radius:50%;background:#F0ECFF;color:#6D4AFF;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800">✓</span>Sınırsız ekip üyesi</div>
+          <div style="display:flex;align-items:center;gap:9px;font-size:13px;color:#5A6072"><span style="width:18px;height:18px;flex:none;border-radius:50%;background:#F0ECFF;color:#6D4AFF;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800">✓</span>Çoklu marka alanı</div>
+          <div style="display:flex;align-items:center;gap:9px;font-size:13px;color:#5A6072"><span style="width:18px;height:18px;flex:none;border-radius:50%;background:#F0ECFF;color:#6D4AFF;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800">✓</span>Gelişmiş roller & izinler</div>
+          <div style="display:flex;align-items:center;gap:9px;font-size:13px;color:#5A6072"><span style="width:18px;height:18px;flex:none;border-radius:50%;background:#F0ECFF;color:#6D4AFF;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800">✓</span>Öncelikli destek</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- testimonials -->
+  <div style="padding:50px clamp(20px,4vw,40px) 70px;max-width:1080px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:38px">
+      <div style="font-size:13px;font-weight:700;color:#6D4AFF;letter-spacing:.5px;margin-bottom:10px">MÜŞTERİLERİMİZ</div>
+      <div style="font-size:clamp(24px,3vw,34px);font-weight:800;color:#16161D;letter-spacing:-.8px;text-wrap:pretty">Ekipler Fliqall’ı seviyor</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px">
+      <div style="background:#fff;border:1px solid #ECEDF3;border-radius:16px;padding:24px;box-shadow:0 1px 3px rgba(16,16,29,.04)">
+        <div style="color:#FBB13C;font-size:14px;margin-bottom:13px">★★★★★</div>
+        <div style="font-size:14px;line-height:1.65;color:#3C4256;margin-bottom:18px">“Tüm platformları ayrı ayrı yönetmekten kurtulduk. İçerik üretim süremiz yarıya indi.”</div>
+        <div style="display:flex;align-items:center;gap:11px">
+          <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#E4D7FF,#C9B4FF);color:#5B3FD6;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px">AY</div>
+          <div><div style="font-size:13px;font-weight:700;color:#1F2433">Ayşe Yılmaz</div><div style="font-size:12px;color:#9AA1B1">Sosyal Medya Müdürü, Lumière</div></div>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #ECEDF3;border-radius:16px;padding:24px;box-shadow:0 1px 3px rgba(16,16,29,.04)">
+        <div style="color:#FBB13C;font-size:14px;margin-bottom:13px">★★★★★</div>
+        <div style="font-size:14px;line-height:1.65;color:#3C4256;margin-bottom:18px">“Önizleme ve onay akışı sayesinde ekipçe çok daha hızlı ve hatasız yayınlıyoruz.”</div>
+        <div style="display:flex;align-items:center;gap:11px">
+          <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#E4D7FF,#C9B4FF);color:#5B3FD6;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px">MK</div>
+          <div><div style="font-size:13px;font-weight:700;color:#1F2433">Mert Kaya</div><div style="font-size:12px;color:#9AA1B1">İçerik Lideri, Nova Studio</div></div>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #ECEDF3;border-radius:16px;padding:24px;box-shadow:0 1px 3px rgba(16,16,29,.04)">
+        <div style="color:#FBB13C;font-size:14px;margin-bottom:13px">★★★★★</div>
+        <div style="font-size:14px;line-height:1.65;color:#3C4256;margin-bottom:18px">“Raporlar tek ekranda; hangi platformun işe yaradığını artık net görüyoruz.”</div>
+        <div style="display:flex;align-items:center;gap:11px">
+          <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#E4D7FF,#C9B4FF);color:#5B3FD6;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px">ZA</div>
+          <div><div style="font-size:13px;font-weight:700;color:#1F2433">Zeynep Ak</div><div style="font-size:12px;color:#9AA1B1">Kurucu, Ak Kreatif</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div style="text-align:center;padding:70px clamp(20px,4vw,40px)">
+    <div style="font-size:clamp(26px,3.4vw,36px);font-weight:800;color:#16161D;letter-spacing:-.8px;max-width:560px;text-wrap:pretty;margin:0 auto">Bugün başlayın, farkı hemen görün</div>
+    <div style="font-size:16px;color:#5A6072;margin:16px auto 28px;max-width:500px">Markanızın tüm sosyal medya akışını tek panelden yönetmenin en hızlı yolu.</div>
+    <button style="padding:15px 30px;border:none;border-radius:13px;color:#fff;font-size:16px;font-weight:700;cursor:pointer;font-family:inherit;box-shadow:0 8px 22px rgba(109,74,255,.34);background:linear-gradient(135deg,#8B5CF6,#6D4AFF)">Ücretsiz hesabını oluştur →</button>
+  </div>
+
+  <!-- footer -->
+  <div style="border-top:1px solid #F1F2F6;background:#FAFAFC">
+    <div class="fq-footer-grid" style="max-width:1080px;margin:0 auto;padding:50px clamp(20px,4vw,40px) 30px;display:grid;grid-template-columns:1.4fr repeat(3,minmax(120px,1fr));gap:34px 24px">
+      <div>
+        <div style="display:flex;align-items:center;gap:9px;margin-bottom:14px"><div style="height:22px;width:22px;border-radius:7px;background:linear-gradient(135deg,#8B5CF6,#6D4AFF);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:10px;font-family:'Plus Jakarta Sans',sans-serif">Fq</div><span style="font-size:14px;font-weight:800;letter-spacing:1px;color:#6D4AFF">FLIQALL</span></div>
+        <div style="font-size:13px;line-height:1.65;color:#6E7488;max-width:230px;margin-bottom:20px">Markanızın tüm sosyal medya akışını tek panelden yönetmenin en hızlı yolu.</div>
+        <div style="display:flex;gap:10px">
+          <div title="İletişim" style="width:34px;height:34px;border-radius:50%;background:#F1F2F6;color:#5A6072;display:flex;align-items:center;justify-content:center;cursor:pointer"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg></div>
+          <div title="Web sitesi" style="width:34px;height:34px;border-radius:50%;background:#F1F2F6;color:#5A6072;display:flex;align-items:center;justify-content:center;cursor:pointer"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.5 4 5.8 4 9s-1.5 6.5-4 9c-2.5-2.5-4-5.8-4-9s1.5-6.5 4-9z"></path></svg></div>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11.5px;font-weight:700;color:#9AA1B1;letter-spacing:.5px;margin-bottom:15px">ÜRÜN</div>
+        <div style="display:flex;flex-direction:column;gap:11px;font-size:13.5px;color:#5A6072;font-weight:600">
+          <span style="cursor:pointer">Özellikler</span><span style="cursor:pointer">Platformlar</span><span style="cursor:pointer">Fiyatlandırma</span><span style="cursor:pointer">Blog</span>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11.5px;font-weight:700;color:#9AA1B1;letter-spacing:.5px;margin-bottom:15px">ŞİRKET</div>
+        <div style="display:flex;flex-direction:column;gap:11px;font-size:13.5px;color:#5A6072;font-weight:600">
+          <span style="cursor:pointer">Hakkımızda</span><span style="cursor:pointer">İletişim</span>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11.5px;font-weight:700;color:#9AA1B1;letter-spacing:.5px;margin-bottom:15px">YASAL</div>
+        <div style="display:flex;flex-direction:column;gap:11px;font-size:13.5px;color:#5A6072;font-weight:600">
+          <span style="cursor:pointer">Gizlilik Politikası</span><span style="cursor:pointer">Kullanım Şartları</span>
+        </div>
+      </div>
+    </div>
+    <div style="max-width:1080px;margin:0 auto;padding:18px clamp(20px,4vw,40px) 26px;border-top:1px solid #EDEEF3;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+      <div style="font-size:12px;color:#9AA1B1">© 2026 Fliqall · Toplu sosyal medya yönetim platformu</div>
+      <div style="font-size:12px"><a href="mailto:info@fliqall.com" style="color:#9AA1B1;text-decoration:none">info@fliqall.com</a></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
